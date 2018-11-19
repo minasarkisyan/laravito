@@ -68,14 +68,9 @@
     </header>
         <main class="app-content py-3">
             <div class="container">
+                @section('breadcrumbs', Breadcrumbs::render())
                 @yield('breadcrumbs')
- 
-                @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                @endif
-
+                @include('layouts.partials.flash')
                 @yield('content')
             </div>
         </main>
