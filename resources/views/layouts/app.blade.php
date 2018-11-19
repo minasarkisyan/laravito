@@ -69,7 +69,7 @@
         <main class="app-content py-3">
             <div class="container">
                 @yield('breadcrumbs')
-
+ 
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
