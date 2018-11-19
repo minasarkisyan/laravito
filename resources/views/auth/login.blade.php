@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
+@section('breadcrumbs')
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+        <li class="breadcrumb-item active">Login</li>
+    </ol>
+@endsection
+
 @section('content')
-<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -67,5 +73,4 @@
             </div>
         </div>
     </div>
-</div>
 @endsection
