@@ -29,6 +29,7 @@ class RegisterTest extends TestCase
         $user->verify();
         self::assertFalse($user->isWait());
         self::assertTrue($user->isActive());
+        self::assertFalse($user->isAdmin());
     }
     public function testAlreadyVerified(): void
     {
