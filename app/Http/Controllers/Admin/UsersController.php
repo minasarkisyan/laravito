@@ -55,7 +55,12 @@ class UsersController extends Controller
             User::STATUS_WAIT => 'Waiting',
         ];
 
-        return view('admin.users.edit', compact('user', 'statuses'));
+        $roles = [
+            User::ROLE_USER => 'User',
+            User::ROLE_ADMIN => 'Admin',
+        ];
+
+        return view('admin.users.edit', compact('user', 'statuses', 'roles'));
     }
 
 
